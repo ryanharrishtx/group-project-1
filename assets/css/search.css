@@ -1,0 +1,57 @@
+:root {
+    --title: font-family: 'Cinzel', serif;
+    --info: font-family: 'Lora', serif;
+    --submit: background-color: #9dae47;
+    --selected: background-color: #bfa6a6;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+  }
+  
+  #logo {
+    text-align: center;
+    padding: 7px;
+    background-color: black;
+    color: white;
+  }
+  
+  #button-container {
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  
+         
+  #button-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+          
+  #button-container li {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #484f59;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    max-width: 90px;
+  }
+  
+  #button-container li:hover {
+    background-color: var(--selected);
+  }
+
+  #submit {
+    background-color: var(--submit);
+  }
