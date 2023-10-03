@@ -72,6 +72,21 @@ body {
     font-family: var(--title);
   }
 
+    #drink-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
   #drink-list-item {
-    /* color: white; */
+    margin: 10px;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-family: var(--info);
+    font-weight: bold;
   }
+    #text {
+        border: 1px solid red;
+    }

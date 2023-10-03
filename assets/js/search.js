@@ -30,7 +30,6 @@ createButton();
     valueButton.forEach((button) => {
         button.addEventListener("click", (event) => {
             document.getElementById("input-container").style.display = "none";
-            document.getElementById("results-container").style.display = "block";
             const buttonValue = event.target.getAttribute("value").toLowerCase();
             fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${buttonValue}`)
             .then((response) => response.json())
@@ -39,7 +38,7 @@ createButton();
                 document.getElementById("title").innerText = `Drinks made with ${buttonValue}:`
                 let drinkContainer = document.getElementById("results-container");
                 drinkContainer.innerHTML = "";
-                let drinkList = document.createElement("ul");
+                let drinkList = document.createElement("div");
                 drinkList.setAttribute("id", "drink-list");
                 drinkContainer.appendChild(drinkList);
                 for (let i = 0; i < data.drinks.length; i++) {
@@ -49,8 +48,10 @@ createButton();
                     drinkListItem.setAttribute("style", "width: 18rem;");
                     let drinkImage = document.createElement("img");
                     drinkImage.setAttribute("src", data.drinks[i].strDrinkThumb);
-                    console.log(drinkImage);
-                    drinkListItem.innerHTML = `${drinkImage}, ${data.drinks[i].strDrink}`;
+                    let drinkImageSrc = drinkImage.getAttribute("src");
+                    console.log(drinkImageSrc);
+                    let drinkName = data.drinks[i].strDrink.toUpperCase();
+                    drinkListItem.innerHTML = `<img src="${drinkImageSrc}" /> ${drinkName}`;
                     drinkList.appendChild(drinkListItem);
                     console.log(drinkListItem);
                 }
