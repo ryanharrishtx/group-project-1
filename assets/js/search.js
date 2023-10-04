@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let container = document.getElementById("button-container");
 
     function createButton() {
-        for (let i = 0; i < liquorOptions.length; i++) { 
+        for (let i = 0; i < liquorOptions.length; i++) {
             let button = document.createElement("button");
-            button.setAttribute("class", "value-button"); // Use class instead of ID
+            button.setAttribute("class", "value-button");
             button.setAttribute("type", "button");
             button.setAttribute("value", liquorOptions[i]);
             button.textContent = liquorOptions[i].toUpperCase();

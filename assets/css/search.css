@@ -38,7 +38,7 @@ body {
   }
   
          
-  #value-button {
+  .value-button {
     font-family: var(--info);
     background-image: linear-gradient(135deg, rgb(136, 136, 136) 0%, rgb(93, 93, 93) 100%);
     margin: 5px;
@@ -50,7 +50,7 @@ body {
     width: 50vw;
   }
   
-  #value-button button:hover {
+  #value-button:hover {
     background-color: var(--selected);
   }
 
@@ -74,7 +74,7 @@ body {
         justify-content: center;
         align-items: center;
     }
-  #drink-list-item {
+  .drink-list-item {
     margin: 10px;
     padding: 10px;
     background-color: transparent;
@@ -83,6 +83,21 @@ body {
     font-family: var(--info);
     font-weight: bold;
   }
-    #drink-list-item img {
-        border: 1px solid red;
-    }
+  .recipe-button {
+    background-color: var(--submit);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    font-family: var(--info);
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .recipe-button:hover {
+    background-color: var(--selected);
+  } 
+  #drink-list img {
+    border: 5px white solid;
+    border-radius: 5px;
+  }
