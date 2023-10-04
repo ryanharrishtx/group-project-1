@@ -5,18 +5,14 @@
     --selected: #bfa6a6;
 }
 
-/* * {
-    border: 1px solid red;
-} */
-
 html {
     height: 100vh;
     width: 100vw;
   }
   
 body {
-    background-image: url(../images/background.jpg);
-    background-size: 100vw 100vh; 
+    background-image: url(../images/altbg.png);
+    background-size: 100%; 
 }
 
   #header {
@@ -54,7 +50,7 @@ body {
     width: 50vw;
   }
   
-  #button-container li:hover {
+  #value-button button:hover {
     background-color: var(--selected);
   }
 
@@ -87,6 +83,6 @@ body {
     font-family: var(--info);
     font-weight: bold;
   }
-    #text {
+    #drink-list-item img {
         border: 1px solid red;
     }
