@@ -1,5 +1,3 @@
-// recipes.js
-
 document.addEventListener("DOMContentLoaded", () => {
     // Get the results container from DOM
     const resultsContainer = document.getElementById("results-container");
