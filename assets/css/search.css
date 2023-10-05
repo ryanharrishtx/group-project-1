@@ -1,3 +1,4 @@
+//Search.css
 :root {
     --title:'Cinzel', serif;
     --info:'Lora', serif;
@@ -98,6 +99,31 @@ body {
     background-color: var(--selected);
   } 
   #drink-list img {
+    border: 5px white solid;
+    border-radius: 5px;
+  }
+
+  #results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #results h2 {
+    color: white;
+    font-family: var(--title);
+    padding: 10px;
+  }
+
+  #results p {
+    color: white;
+    font-family: var(--info);
+    padding: 10px;
+  }
+
+  #results img {
+    width: 50vw;
     border: 5px white solid;
     border-radius: 5px;
   }
