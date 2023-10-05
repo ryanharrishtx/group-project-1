@@ -4,14 +4,6 @@
 // Wiki API:
 // https://www.mediawiki.org/wiki/API:Main_page
 
-//results.js
-// API LINKS:
-// Cocktail Database:
-// https://rapidapi.com/thecocktaildb/api/the-cocktail-db/
-// Wiki API:
-// https://www.mediawiki.org/wiki/API:Main_page
-
-
 function displaySavedData() {
     // Get the recipe data from local storage
     let recipeData = JSON.parse(localStorage.getItem("recipe"));
@@ -24,9 +16,17 @@ function displaySavedData() {
     // If there is a result element, create the recipe name and image
     if (resultEl) {
         let backButton = document.createElement("button");
+
+        // Give it a class of recipe-name
         backButton.setAttribute("class", "back-button");
+
+        // Give it a type of button
         backButton.setAttribute("type", "button");
+
+        // Set the inner text to "Back"
         backButton.textContent = "Back";
+
+        // Append the recipe name to the results element
         resultEl.appendChild(backButton);
 
         // Redirect to results page

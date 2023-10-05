@@ -1,4 +1,4 @@
-//Search.css
+/* Setting up variables */
 :root {
     --title:'Cinzel', serif;
     --info:'Lora', serif;
@@ -6,16 +6,19 @@
     --selected: #bfa6a6;
 }
 
+/* applies to everything within the HTML element from the DOM */
 html {
     height: 100vh;
     width: 100vw;
   }
-  
+
+/* applies to everything within the body element from the DOM */
 body {
     background-image: url(../images/altbg.png);
     background-size: 100%; 
 }
 
+/* header and logo both style the Mixology Matchmaker logo at the top of each screen*/
   #header {
     display: flex;
     justify-content: center;
@@ -26,6 +29,7 @@ body {
     color: #FFFFFF;
   }
   
+/* style the liquor selection */
   #input-container {
     display: flex;
     flex-direction: column;
@@ -37,8 +41,8 @@ body {
     flex-direction: column;
     padding: 0;
   }
-  
-         
+
+  /* This is for the actual liquor selection button */
   .value-button {
     font-family: var(--info);
     background-image: linear-gradient(135deg, rgb(136, 136, 136) 0%, rgb(93, 93, 93) 100%);
@@ -50,31 +54,23 @@ body {
     border-radius: 5px;
     width: 50vw;
   }
-  
+  /* And what happens when you hover over one of those buttons */
   #value-button:hover {
     background-color: var(--selected);
   }
 
-  #search {
-    background-image: linear-gradient(135deg, rgb(174, 188, 95) 0%, rgb(113, 127, 49) 100%);
-    font-family: var(--info);
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    width: 50vw;
-  }
-
+  /* keeps the styling of any page titles consistent across the site */
   #title {
     color: white;
     font-family: var(--title);
   }
-
-    #drink-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  /* styles the drinks that are listed after liquor selection is made */
+  #drink-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .drink-list-item {
     margin: 10px;
     padding: 10px;
@@ -84,6 +80,12 @@ body {
     font-family: var(--info);
     font-weight: bold;
   }
+  #drink-list img {
+    border: 5px white solid;
+    border-radius: 5px;
+  }
+
+  /* styles the button that takes you to the recipe page */
   .recipe-button {
     background-color: var(--submit);
     border: none;
@@ -94,15 +96,11 @@ body {
     font-weight: bold;
     cursor: pointer;
   }
-
   .recipe-button:hover {
     background-color: var(--selected);
-  } 
-  #drink-list img {
-    border: 5px white solid;
-    border-radius: 5px;
   }
 
+  /* styles the recipe page */
   #results {
     display: flex;
     flex-direction: column;
