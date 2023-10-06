@@ -19,14 +19,10 @@ body {
 }
 
 /* header and logo both style the Mixology Matchmaker logo at the top of each screen*/
-  #header {
-    display: flex;
-    justify-content: center;
-  }
   #logo {
     text-align: center;
     padding: 7px;
-    color: #FFFFFF;
+    width: inherit;
   }
   
 /* style the liquor selection */
