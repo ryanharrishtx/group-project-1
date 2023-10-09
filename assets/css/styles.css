@@ -15,18 +15,15 @@ html {
 /* applies to everything within the body element from the DOM */
 body {
     background-image: url(../images/altbg.png);
+    background-repeat: repeat;
     background-size: 100%; 
 }
 
 /* header and logo both style the Mixology Matchmaker logo at the top of each screen*/
-  #header {
-    display: flex;
-    justify-content: center;
-  }
   #logo {
     text-align: center;
     padding: 7px;
-    color: #FFFFFF;
+    width: inherit;
   }
   
 /* style the liquor selection */
@@ -35,6 +32,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 34vw;
   }
   #button-container {
     display: flex;
@@ -81,26 +80,39 @@ body {
     font-weight: bold;
   }
   #drink-list img {
-    border: 5px white solid;
-    border-radius: 5px;
+    border: 5px gray solid;
+    border-radius: 50px;
+  }
+  .drink-name {
+    color: white;
+    padding: 10px;
   }
 
   /* styles the button that takes you to the recipe page */
   .recipe-button {
-    background-color: var(--submit);
+    font-family: var(--info);
+    background-image: linear-gradient(135deg, rgb(136, 136, 136) 0%, rgb(93, 93, 93) 100%);
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
     border: none;
     border-radius: 5px;
-    padding: 5px;
-    color: white;
-    font-family: var(--info);
-    font-weight: bold;
-    cursor: pointer;
   }
   .recipe-button:hover {
     background-color: var(--selected);
   }
 
   /* styles the recipe page */
+  .back-button {
+    font-family: var(--info);
+    font-style: uppercase;
+    background-image: linear-gradient(135deg, rgb(136, 136, 136) 0%, rgb(93, 93, 93) 100%);
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
   #results {
     display: flex;
     flex-direction: column;
@@ -112,6 +124,7 @@ body {
     color: white;
     font-family: var(--title);
     padding: 10px;
+    text-decoration: underline;
   }
 
   #results p {
@@ -122,6 +135,13 @@ body {
 
   #results img {
     width: 50vw;
-    border: 5px white solid;
-    border-radius: 5px;
+    border: 5px gray solid;
+    border-radius: 50px;
+  }
+
+  .recipe-instructions {
+    color: white;
+    font-family: var(--info);
+    padding: 10px;
+    text-align: center;
   }

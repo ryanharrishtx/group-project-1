@@ -87,8 +87,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     let drinkImageSrc = drinkImage.getAttribute("src");
                     console.log(drinkImage);
 
-                    // Append the drink image to the drink list item
+                    
                     let drinkName = data.drinks[i].strDrink.toUpperCase();
+                    console.log(drinkName);
+                    const drinkNameEl = document.createElement("h5");
+                    drinkNameEl.setAttribute("class", "drink-name");
+                    drinkNameEl.textContent = drinkName;
+                    console.log(drinkNameEl);
 
                     // Create a button for the recipe
                     let recipeButton = document.createElement("button");
@@ -106,7 +111,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     recipeButton.textContent = "RECIPE";
 
                     // Append the recipe button to the drink list item
-                    drinkListItem.innerHTML = `<img src="${drinkImageSrc}" /> ${drinkName} ${recipeButton.outerHTML}`;
+                    // drinkListItem.innerHTML = `<img src="${drinkImageSrc}" />` + drinkNameEl[0] + recipeButton.outerHTML;
+                    drinkListItem.appendChild(drinkImage);
+                    drinkListItem.appendChild(drinkNameEl);
+                    drinkListItem.appendChild(recipeButton);
 
                     // Append the drink list item to the drink list
                     drinkList.appendChild(drinkListItem);
