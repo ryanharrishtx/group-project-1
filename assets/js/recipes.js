@@ -24,7 +24,7 @@ function displaySavedData() {
         backButton.setAttribute("type", "button");
 
         // Set the inner text to "Back"
-        backButton.textContent = "Back";
+        backButton.textContent = "BACK";
 
         // Append the recipe name to the results element
         resultEl.appendChild(backButton);
@@ -70,9 +70,12 @@ function displaySavedData() {
 
         // Loop through the recipeData object and push the ingredients and measurements into the array
         for (let i = 1; i < 16; i++) {
+
+            let ingredient = recipeData[`strIngredient${i}`];
+            let measurement = recipeData[`strMeasure${i}`];
             // If there is an ingredient and measurement, push them into the array
             if (recipeData[`strIngredient${i}`] && recipeData[`strMeasure${i}`]) {
-                ingredients.push(recipeData[`strIngredient${i}`], recipeData[`strMeasure${i}`]);
+                ingredients.push(`${ingredient} - ${measurement} | `);
             }
         }
 
