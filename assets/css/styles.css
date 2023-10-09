@@ -32,6 +32,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 34vw;
   }
   #button-container {
     display: flex;
