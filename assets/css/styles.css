@@ -33,7 +33,6 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 34vw;
   }
   #button-container {
     display: flex;
@@ -60,7 +59,7 @@ body {
 
   /* keeps the styling of any page titles consistent across the site */
   #title {
-    color: white;
+    color: red;
     font-family: var(--title);
   }
   /* styles the drinks that are listed after liquor selection is made */
