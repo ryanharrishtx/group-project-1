@@ -1,0 +1,95 @@
+:root {
+    --title:'Cinzel', serif;
+    --info:'Lora', serif;
+    --submit: #9dae47;
+    --selected: #bfa6a6;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+  }
+  
+body {
+    background-image: url(../images/altbg.png);
+    background-size: 100%; 
+}
+
+  #header {
+    display: flex;
+    justify-content: center;
+  }
+  #logo {
+    text-align: center;
+    padding: 7px;
+    color: #FFFFFF;
+  }
+  
+  #input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #button-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  
+         
+  .value-button {
+    font-family: var(--info);
+    background-image: linear-gradient(135deg, rgb(136, 136, 136) 0%, rgb(93, 93, 93) 100%);
+    margin: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 50vw;
+  }
+  
+  #value-button:hover {
+    background-color: var(--selected);
+  }
+
+  #title {
+    color: white;
+    font-family: var(--title);
+  }
+
+  #drink-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .drink-list-item {
+    margin: 10px;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-family: var(--info);
+    font-weight: bold;
+  }
+  .drink-image {
+    border: 5px gray solid;
+    border-radius: 5px;
+  }
+
+  .recipe-button {
+    background-color: var(--submit);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    font-family: var(--info);
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .recipe-button:hover {
+    background-color: var(--selected);
+  } 
