@@ -1,11 +1,12 @@
 let cocktailDBAPIKey = "000769ddcamsh5836fbe556e139ap100c26jsnaf07c3af13fa";
-let liquorOptions = ["Vodka", "Gin", "Whiskey", "Tequila", "Rum"];
+let liquorOptions = ["Vodka", "Gin", "Whiskey", "Tequila", "Rum", "Bourbon", "Absinthe"];
 
 document.addEventListener("DOMContentLoaded", () => {
     let container = document.getElementById("button-container");
 
     // Create buttons for each liquor option in liquorOptions array
     function createButton() {
+
         // Loop through the liquorOptions array
         for (let i = 0; i < liquorOptions.length; i++) {
 
@@ -18,8 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
             // Give it a type of button
             button.setAttribute("type", "button");
 
+            // Sort the liquor options alphabetically
+            let alphaButton = liquorOptions.sort();
+
             // Give it a value of the liquor option
-            button.setAttribute("value", liquorOptions[i]);
+            button.setAttribute("value", alphaButton[i]);
 
             // Set the text content to the liquor option
             button.textContent = liquorOptions[i].toUpperCase();
